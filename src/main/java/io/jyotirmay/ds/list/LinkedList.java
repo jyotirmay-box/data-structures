@@ -2,7 +2,7 @@ package io.jyotirmay.ds.list;
 
 import java.io.Serializable;
 
-public interface LinkedList<E> extends Serializable {
+public interface LinkedList<E extends Comparable<E>> extends Serializable {
 
     boolean isEmpty();
 
@@ -19,4 +19,8 @@ public interface LinkedList<E> extends Serializable {
     E removeFirst();
 
     E removeLast();
+
+    void display();
+
+    boolean search(E data);
 }
